@@ -1,0 +1,11 @@
+CREATE TABLE `table_2` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `table_1_id` INT(10) UNSIGNED NOT NULL,
+  `name` VARCHAR(255) NOT NULL DEFAULT '',
+  `description` TEXT,
+  `created` INT(10) UNSIGNED NOT NULL DEFAULT 0,
+  `updated` INT(10) UNSIGNED NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  KEY `table_1_id` (`table_1_id`),
+  CONSTRAINT `table_2_table_1_id` FOREIGN KEY (`table_1_id`) REFERENCES `table_1` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
