@@ -1,0 +1,8 @@
+CREATE TABLE `table_3` (
+  `id` CHAR(36) NOT NULL,
+  `name` VARCHAR(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO table_3 (id,name) VALUES ('98117b28-7180-11ec-a931-09d46b0020f8','asdf');
+INSERT INTO table_3 (id,name) VALUES ('a4296830-7180-11ec-a931-09d46b0020f8','wer');
